@@ -1,0 +1,9 @@
+<form ng-submit= "submitPost()">
+	<input type = "text" ng-model = "post.title" >
+	<input type = "text" ng-model = "post.url" >
+	<input type = "submit" value = "Add post" >
+</form>
+<div ng-repeat = "(postId,post) in posts">
+	<a href="{{post.url}} "> {{post.title}} </a>
+	<button type = "button" ng-click="removePost(postId)">Delete</button>
+</div>
